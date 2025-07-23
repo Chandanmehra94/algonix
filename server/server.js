@@ -8,6 +8,9 @@ const dotenv = require('dotenv');
 const multer = require('multer');
 const path = require('path');
 
+app.get('/', (req, res) => {
+  res.send('Algonix backend is live');
+});
 require('dotenv').config();
 const app = express();
 app.use(express.json());
