@@ -60,7 +60,7 @@ function Home() {
           <Link to="/">Home</Link>
           <Link to="/tutorials">Tutorials</Link>
           <a href="https://www.linkedin.com/company/algonix">Events</a>
-          <a href="/sheet">Sheet</a>
+         <Link to="/sheet">Author</Link>
           <Link to="/author">Author</Link>
           {user ? (
             <div className="profile-dropdown" onClick={toggleDropdown}>
