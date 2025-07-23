@@ -24,6 +24,10 @@ function Tutorials() {
     }
   };
 
+  const res = await axios.get(`https://algonix-backend.onrender.com/api/tutorials`);
+  console.log("API URL is:", `${process.env.REACT_APP_API_URL || 'http://localhost:3000'}/api/tutorials`);
+
+
   const handleAddTutorial = async (e) => {
     e.preventDefault();
     if (!newTutorial.iframeLink || !newTutorial.directLink || !newTutorial.topic) {
