@@ -8,9 +8,7 @@ const dotenv = require('dotenv');
 const multer = require('multer');
 const path = require('path');
 
-app.get('/', (req, res) => {
-  res.send('Algonix backend is live');
-});
+
 require('dotenv').config();
 const app = express();
 app.use(express.json());
@@ -19,6 +17,10 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+app.get('/', (req, res) => {
+  res.send('Algonix backend is live');
+});
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
