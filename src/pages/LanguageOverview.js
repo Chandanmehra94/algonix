@@ -19,7 +19,7 @@ function LanguageOverview() {
   useEffect(() => {
     const fetchMaterials = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL || 'http://localhost:3000'}/api/materials/${lang.toLowerCase()}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL'}/api/materials/${lang.toLowerCase()}`);
         setMaterials(res.data);
         setError('');
       } catch (err) {
@@ -37,7 +37,7 @@ function LanguageOverview() {
     }
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL || 'http://localhost:3000'}/api/materials`,
+        `${process.env.REACT_APP_API_URL'}/api/materials`,
         { language: lang.toLowerCase(), ...addForm },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
