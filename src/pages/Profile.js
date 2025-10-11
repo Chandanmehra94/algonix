@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import '../styles/Profile.css';
+import { Link } from 'react-router-dom';
 
 function Profile() {
   const { user, logout, refreshUser } = useContext(AuthContext);
@@ -85,7 +86,7 @@ function Profile() {
           <a href="/" className="logo">ALGONIX</a>
           <div className="nav-links">
             <a href="/">Home</a>
-            <a href="/sheet">Sheet</a>
+            <Link to="/sheet">Sheet</Link>
             {user ? (
               <div className="profile-dropdown" onClick={toggleDropdown}>
                 <img
