@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import '../styles/Auth.css';
 
+
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
