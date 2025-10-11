@@ -99,6 +99,7 @@ function Sheet() {
           <div className="nav-links">
             <a href="/">Home</a>
             <Link to="/sheet">Sheet</Link>
+            <Link to="/author">Author</Link>
             <a href="/author">Author</a>
             {user ? (
               <div className="profile-dropdown">
