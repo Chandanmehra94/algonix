@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'; // Added Link
 import { AuthContext } from '../context/AuthContext'; // Added AuthContext
 import axios from 'axios';
 import '../styles/Tutorials.css';
+import { Link } from 'react-router-dom';
 
 function Tutorials() {
   const [tutorials, setTutorials] = useState([]);
@@ -83,8 +84,8 @@ function Tutorials() {
           <a href="/" className="logo">ALGONIX</a>
           <div className="nav-links">
             <a href="/">Home</a>
-            <a href="/sheet">Sheet</a>
-            <a href="/author">Author</a>
+            <Link to="/sheet">Sheet</Link>
+            <Link to="/author">Author</Link>
             {user ? (
               <div className="profile-dropdown" onClick={toggleDropdown}>
                 <img
