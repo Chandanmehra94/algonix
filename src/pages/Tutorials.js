@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'; // Added Link
 import { AuthContext } from '../context/AuthContext'; // Added AuthContext
 import axios from 'axios';
 import '../styles/Tutorials.css';
-import { Link } from 'react-router-dom';
+
 
 function Tutorials() {
   const [tutorials, setTutorials] = useState([]);
