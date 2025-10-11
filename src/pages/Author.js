@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import '../styles/Author.css';
+import { Link } from 'react-router-dom';
 
 function Author() {
   const { user, logout } = useContext(AuthContext);
@@ -12,8 +13,8 @@ function Author() {
           <a href="/" className="logo">ALGONIX</a>
           <div className="nav-links">
             <a href="/">Home</a>
-            <a href="/sheet">Sheet</a>
-            <a href="/author">Author</a>
+            <Link to="/sheet">Sheet</Link>
+            <Link to="/author">Author</Link>
             {user ? (
               <div className="profile-dropdown">
                 <img
