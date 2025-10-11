@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import '../styles/Sheet.css';
+import { Link } from 'react-router-dom';
 
 function Sheet() {
   const { user, logout } = useContext(AuthContext);
@@ -97,7 +98,7 @@ function Sheet() {
           <a href="/" className="logo">ALGONIX</a>
           <div className="nav-links">
             <a href="/">Home</a>
-            <a href="/sheet">Sheet</a>
+            <Link to="/sheet">Sheet</Link>
             <a href="/author">Author</a>
             {user ? (
               <div className="profile-dropdown">
