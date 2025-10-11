@@ -7,6 +7,7 @@ import { java } from '@codemirror/lang-java';
 import { python } from '@codemirror/lang-python';
 import axios from 'axios';
 import '../styles/Language.css';
+import { Link } from 'react-router-dom';
 
 function Language() {
   const { lang, topic: urlTopic, subtopic: urlSubtopic } = useParams();
@@ -237,8 +238,8 @@ function Language() {
           <a href="/" className="logo" onClick={handleLogoClick}>ALGONIX</a>
           <div className="nav-links">
             <a href="/">Home</a>
-            <a href="/sheet">Sheet</a>
-            <a href="/author">Author</a>
+            <Link to="/sheet">Sheet</Link>
+            <Link to="/author">Author</Link>
             {user ? (
               <div className="profile-dropdown" onClick={toggleDropdown}>
                <img
